@@ -109,14 +109,18 @@
     .box:hover {
         padding: 20px;
         transform: scale(1.1);
-        border-color: #0b3d70;
+        border: 2px solid #0b3d70;
     }
 
     .heading-three {
         margin: 10px 0px;
-        font-size: 17px;
+        font-size: 18px;
         color: blue;
         font-weight: 500;
+    }
+    
+    .detail {
+        color: #525f7f;
     }
 
     .btn-1 {
@@ -270,12 +274,12 @@
 
         <div class="boxes">
             <div class="box">
-            <h3 class="heading-three">Services</h3>
+            <h3 class="heading-three">SERVICES</h3>
             <p class="detail">Details about the mental health services provided by the Counselling Service.</p>
             <button class="btn-1">Learn More</button>
             </div>
             <div class="box">
-            <h3 class="heading-three">Get Appointment</h3>
+            <h3 class="heading-three">GET APPOINTMENT</h3>
             <p class="detail">Get individual appointments with counsellors.</p>
             <button class="btn-1">Book Now</button>
             </div>
