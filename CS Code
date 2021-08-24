@@ -128,6 +128,45 @@
         font-size: 17px;
         font-weight: 500;
     }
+    
+    .tables {
+        background-color: #f4f5f7;
+        display: flex;
+        justify-content: center;
+    }
+
+    .table {
+        background-color: white;
+        margin: 25px;
+        border: 2px solid white;
+        border-radius: 4px;
+        width: 300px;
+        box-shadow: 5px 5px 10px rgb(216, 216, 216);
+    }
+
+    .heading-table {
+        margin: 0px;
+        background-color: #172b4d;
+        height: 80px;
+        color: white;
+        border-radius: 4px;
+    }
+
+    .table-heading {
+        font-family: sans-serif;
+        font-weight: 500;
+        margin: 0px;
+        padding:24px;
+        font-size: 25px;
+    }
+
+    .about-us {
+        font-size: 15px;
+        font-family: sans-serif;
+        color: #525f7f;
+        padding: 30px;
+    }
+
 </style>
 
     <body>
@@ -200,6 +239,34 @@
             <h3 class="heading-three">AWARENESS VIDEOS</h3>
             <p class="detail">Short videos to help you learn more about mental health.</p>
             <button class="btn-1">Learn More</button>
+            </div>
+            </div>
+            
+            <div class="tables">
+                <div class="table">
+                    <div class="heading-table">
+                <h4 class="table-heading">Address</h4>
+                </div>
+                <p class="about-us">Counselling Service<br>
+            House No. 503<br>
+            Type V<br>
+            IIT Kanpur<br>
+            208016<br><br>
+            Office Timings:<br>
+            11:00 AM - 7:00 PM (Mon to Fri)<br>
+            Phone:<br>
+            +91 512 2597784<br>
+            Email:<br>
+            head_cs@iitk.ac.in (Head, Counselling Service)<br>
+            counselor@iitk.ac.in (Appointments)</p>
+            </div>
+            
+            <div class="table">
+                <div class="heading-table">
+            <h4 class="table-heading">NEWS FEED</h4>
+            </div>
+            <p class="about-us">- Welcome to the new website of Counselling Service IIT Kanpur
+            </p>
             </div>
             </div>
     </body>
