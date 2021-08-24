@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
 <style>
     body {
         margin: 0px;
         padding: 0px;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+        font-family: sans-serif;
     }
 
     .half {
-        background-image: linear-gradient(to bottom right, #380370, #f39bff);
-        min-height: 100%;
+        background-image: linear-gradient(to bottom right, #4743EF, #d4418e);
+        
     }
 
     .v-nav-bar {
@@ -49,7 +52,7 @@
         align-items: center;
         justify-content: center;
         margin-top: 100px;
-        padding-bottom: 35px;
+        padding-bottom: 150px;
     }
 
     .intro {
@@ -75,8 +78,9 @@
     .btn {
         border: 2px solid white;
         border-radius: 4px;
+        color: #212529;
         padding: 10px;
-        font-size: 15px;
+        font-size: 14px;
         font-weight: 500;
     }
 
@@ -98,7 +102,7 @@
     .box {
         box-shadow: 5px 5px 10px #b9b6b6;
         border: 2px solid rgb(223, 223, 250);
-        background-color: rgb(235, 235, 252);
+        background-color: rgb(235, 235, 252, 0.5);
         padding: 10px;
         width: 250px;
         transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -128,7 +132,7 @@
         font-size: 17px;
         font-weight: 500;
     }
-    
+
     .tables {
         background-color: #f4f5f7;
         display: flex;
@@ -167,13 +171,85 @@
         padding: 30px;
     }
 
+    @media screen and (max-width: 620px) {
+        body {
+            width: 100%;
+        }
+        .half {
+            width: 100%;
+        }
+
+        .v-nav-bar {
+            width: 100%;
+        }
+
+        .v-class {
+            opacity: 0;
+            display: none;
+        }
+
+        .set {
+            padding: 25px 33px 150px 33px;
+            flex-direction: column;
+            margin-top: 0px;
+        }
+
+        .intro {
+            width: 100%;
+            padding-left: 0px;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+
+        .heading {
+            font-size: 30px;
+            font-weight: 500;
+        }
+
+        .sub-heading {
+            font-size: 25px;
+            font-weight: 500;
+        }
+
+        .info {
+            width: 70%;
+            line-height: 1.7;
+            font-size: 20px;
+        }
+
+        .pictures {
+            height: 200px;
+            margin-left: 0px;
+            margin-top: 70px;
+        }
+
+        .boxes {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .box {
+            margin-top: 30px;
+            width: 75%;
+        }
+
+        .tables {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .table {
+            margin-top: 25px;
+        }
+    }
+
 </style>
 
     <body>
         <div class="half">
         <nav class="v-nav-bar">
             <label class="logo">CS-IITK</label>
-            <ul class="list">
+            <ul class="list v-class">
                 <li class="li">Home</li>
                 <li class="li">Student Info</li>
                 <li class="li">New Students</li>
@@ -241,7 +317,7 @@
             <button class="btn-1">Learn More</button>
             </div>
             </div>
-            
+
             <div class="tables">
                 <div class="table">
                     <div class="heading-table">
@@ -270,7 +346,4 @@
             </div>
             </div>
     </body>
-    <script>
-        //console.log(window.innerHeight);
-    </script>
 </html>
