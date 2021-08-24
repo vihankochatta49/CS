@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<style>
+    body {
+        margin: 0px;
+        padding: 0px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    }
+
+    .half {
+        background-image: linear-gradient(to bottom right, #380370, #f39bff);
+        min-height: 100%;
+    }
+
+    .v-nav-bar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo {
+        color: white;
+        font-size: 40px;
+        line-height: 90px;
+    }
+
+    .list {
+        list-style: none;
+        float: right;
+    }
+
+    .li {
+        font-size: 18px;
+        color: white;
+        padding: 10px;
+        margin: 0px 15px;
+        display: inline-block;
+        transition: 1s;
+    }
+
+    .li:hover {
+        padding: 20px;
+        color: rgb(216, 215, 215);
+        border-bottom: 3px solid white;
+    }
+
+    .set {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 100px;
+        padding-bottom: 35px;
+    }
+
+    .intro {
+        width: 400px;
+        margin-right: 70px;
+    }
+
+    .heading {
+        color: white;
+        font-size: 40px;
+    }
+
+    .sub-heading {
+        color: white;
+        font-size: 30px;
+    }
+
+    .info {
+        color: white;
+        font-size: 20px;
+    }
+
+    .btn {
+        border: 2px solid white;
+        border-radius: 4px;
+        padding: 10px;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .pictures {
+        margin-left: 90px;
+        border-radius: 10px;
+    }
+    
+    .boxes {
+        margin: 50px 0px;
+        display: grid;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 300px 300px 300px;
+        grid-gap: 40px 40px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .box {
+        box-shadow: 5px 5px 10px #b9b6b6;
+        border: 2px solid rgb(223, 223, 250);
+        background-color: rgb(235, 235, 252);
+        padding: 10px;
+        width: 250px;
+        transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    .box:hover {
+        padding: 20px;
+        transform: scale(1.1);
+        border-color: #0b3d70;
+    }
+
+    .heading-three {
+        margin: 10px 0px;
+        font-size: 17px;
+        color: blue;
+        font-weight: 500;
+    }
+
+    .btn-1 {
+        box-shadow: 3px 3px 5px #afafb9;
+        border-radius: 2px;
+        color: white;
+        border: 2px solid #5273e4;
+        background-color: #5273e4;
+        padding: 12px;
+        margin-top: 20px;
+        font-size: 17px;
+        font-weight: 500;
+    }
+</style>
+
+    <body>
+        <div class="half">
+        <nav class="v-nav-bar">
+            <label class="logo">CS-IITK</label>
+            <ul class="list">
+                <li class="li">Home</li>
+                <li class="li">Student Info</li>
+                <li class="li">New Students</li>
+                <li class="li">Quick Links</li>
+                <li class="li">Emergency</li>
+                <li class="li">Team</li>
+            </ul>
+        </nav>
+        <div class="set">
+        <div class="intro">
+            <h1 class="heading">Counselling Service</h1>
+            <h2 class="sub-heading">IIT Kanpur</h2>
+            <p class="info">The Counselling Service is your home away from home. We are a team of professional counsellors, empathetic students and faculty advisors to assist you emotionally and academically
+            </p>
+            <button class="btn">EXPLORE OPTIONS</button>
+        </div>
+        <img class="pictures" src="https://www.iitk.ac.in/counsel/assets/img/carousel/img2.jpg">
+        </div>
+        </div>
+
+        <div class="boxes">
+            <div class="box">
+            <h3 class="heading-three">Services</h3>
+            <p class="detail">Details about the mental health services provided by the Counselling Service.</p>
+            <button class="btn-1">Learn More</button>
+            </div>
+            <div class="box">
+            <h3 class="heading-three">Get Appointment</h3>
+            <p class="detail">Get individual appointments with counsellors.</p>
+            <button class="btn-1">Book Now</button>
+            </div>
+            <div class="box">
+            <h3 class="heading-three">WORRIED ABOUT SOMEONE?</h3>
+            <p class="detail">Help us know them by filling an anonymous form.</p>
+            <button class="btn-1">Learn More</button>
+            </div>
+            <div class="box">
+            <h3 class="heading-three">REQUEST A REMEDIAL</h3>
+            <p class="detail">A peer-supported academic remedial help is available by just filling a form.</p>
+            <button class="btn-1">Learn More</button>
+            </div>
+            <div class="box">
+            <h3 class="heading-three">FAMILY TREE</h3>
+            <p class="detail">Have a look at how the student community exists as a family at IITK.</p>
+            <button class="btn-1">Learn More</button>
+            </div>
+            <div class="box">
+            <h3 class="heading-three">SAMVAD</h3>
+            <p class="detail">A mental health initiative for community building and mental health awareness on campus.</p>
+            <button class="btn-1">Learn More</button>
+            </div>
+            <div class="box">
+            <h3 class="heading-three">NOT SURE IF YOU NEED HELP?</h3>
+            <p class="detail">Online tools to evaluate your mental health.</p>
+            <button class="btn-1">Learn More</button>
+            </div>
+            <div class="box">
+            <h3 class="heading-three">FAQ</h3>
+            <p class="detail">Some common concerns we come across on a regular basis.</p>
+            <button class="btn-1">Learn More</button>
+            </div>
+            <div class="box">
+            <h3 class="heading-three">AWARENESS VIDEOS</h3>
+            <p class="detail">Short videos to help you learn more about mental health.</p>
+            <button class="btn-1">Learn More</button>
+            </div>
+            </div>
+    </body>
+    <script>
+        //console.log(window.innerHeight);
+    </script>
+</html>
