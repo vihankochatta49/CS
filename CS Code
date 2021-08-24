@@ -47,6 +47,22 @@
         border-bottom: 3px solid white;
     }
 
+    .burger {
+      position: absolute;
+      right: 8px;
+      display: flex;
+      flex-direction: column;
+      display: none;
+    }
+  
+    .line {
+      width: 33px;
+      height: 4px;
+      margin: 4px 5px;
+      background-color: white;
+    }
+  
+
     .set {
         display: flex;
         align-items: center;
@@ -86,7 +102,7 @@
 
     .pictures {
         margin-left: 90px;
-        border-radius: 10px;
+        border-radius: 4px;
     }
     
     .boxes {
@@ -118,7 +134,7 @@
         color: blue;
         font-weight: 500;
     }
-    
+
     .detail {
         color: #525f7f;
     }
@@ -171,6 +187,7 @@
         font-family: sans-serif;
         color: #525f7f;
         padding: 30px;
+        line-height: 1.7;
     }
 
     @media screen and (max-width: 620px) {
@@ -182,13 +199,18 @@
         }
 
         .v-nav-bar {
-            width: 100%;
+            justify-content: end;
+            padding: 0px 20px;
         }
 
         .v-class {
             opacity: 0;
             display: none;
         }
+
+        .burger {
+      display: block;
+  }
 
         .set {
             padding: 25px 33px 150px 33px;
@@ -259,6 +281,12 @@
                 <li class="li">Emergency</li>
                 <li class="li">Team</li>
             </ul>
+            
+        <div class="burger"><!--burger-->
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
         </nav>
         <div class="set">
         <div class="intro">
@@ -325,16 +353,16 @@
                     <div class="heading-table">
                 <h4 class="table-heading">Address</h4>
                 </div>
-                <p class="about-us">Counselling Service<br>
+                <p class="about-us"><b>Counselling Service</b><br>
             House No. 503<br>
             Type V<br>
             IIT Kanpur<br>
             208016<br><br>
-            Office Timings:<br>
+            <b>Office Timings:</b><br>
             11:00 AM - 7:00 PM (Mon to Fri)<br>
-            Phone:<br>
+            <b>Phone:</b><br>
             +91 512 2597784<br>
-            Email:<br>
+            <b>Email:</b><br>
             head_cs@iitk.ac.in (Head, Counselling Service)<br>
             counselor@iitk.ac.in (Appointments)</p>
             </div>
@@ -343,7 +371,7 @@
                 <div class="heading-table">
             <h4 class="table-heading">NEWS FEED</h4>
             </div>
-            <p class="about-us">- Welcome to the new website of Counselling Service IIT Kanpur
+            <p class="about-us">- Welcome to the new website of <b>Counselling Service IIT Kanpur</b>
             </p>
             </div>
             </div>
