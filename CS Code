@@ -101,8 +101,6 @@
 
     .box {
         box-shadow: 5px 5px 10px #b9b6b6;
-        border: 2px solid rgb(223, 223, 250);
-        background-color: rgb(235, 235, 252, 0.5);
         padding: 10px;
         width: 250px;
         transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
