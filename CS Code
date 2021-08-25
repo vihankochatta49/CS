@@ -189,7 +189,74 @@
         line-height: 1.7;
     }
 
+    .links {
+        padding-bottom: 10px;
+        margin: 0px;
+        background-color: #f4f5f7;
+        width: 100%;
+        display: flex;
+    }
+
+    .link {
+        width: 33.33%;
+        text-align: center;
+        font-size: 15px;
+        color: #525f7f;
+    }
+
+    .anchor {
+        text-decoration: none;
+        color: #5e72e4;
+    }
+
+    .anchor:hover {
+        color: #2503be;
+    }
+
+    .bttn {
+        cursor: pointer;
+        background-color: #f4f5f7;
+        font-size: 15px;
+        border: none;
+        color: #212529;
+    }
+
+    .bttn:hover {
+        color: black;
+    }
+
+    .about-devs {
+    z-index: 1050;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    background-image: linear-gradient(to bottom right, #4743EF, #d4418e);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.person1 {
+    margin: 25px;
+    color: white;
+    text-align: center;
+}
+
+.photo {
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+}
+
+.appear {
+    display: flex;
+    opacity: 1 !important;
+}
+
     @media screen and (max-width: 620px) {
+
         body {
             width: 100%;
         }
@@ -198,8 +265,36 @@
         }
 
         .v-nav-bar {
+
+            flex-direction: column;
+            align-items: baseline;
             justify-content: end;
-            padding: 0px 20px;
+            padding: 15px 20px;
+            height: 100%;
+        }
+
+        .logo {
+            padding: 15px;
+            font-size: 25px;
+            line-height: 0px;
+        }
+
+        .list {
+            box-shadow: 0 50px 100px rgb(50 50 93 / 10%), 0 15px 35px rgb(50 50 93 / 15%), 0 5px 15px rgb(0 0 0 / 10%);
+            padding: 0px;
+            border-radius: 5px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .li {
+            color: #172b4d;
+        }
+
+        .h-class {
+            height: 60px;
         }
 
         .v-class {
@@ -208,8 +303,8 @@
         }
 
         .burger {
-      display: block;
-  }
+           display: block;
+        }
 
         .set {
             padding: 25px 33px 150px 33px;
@@ -259,10 +354,15 @@
         .tables {
             display: flex;
             flex-direction: column;
+            align-items: center;
         }
 
         .table {
             margin-top: 25px;
+        }
+
+        .about-devs {
+            flex-direction: column;
         }
     }
 
@@ -270,7 +370,7 @@
 
     <body>
         <div class="half">
-        <nav class="v-nav-bar">
+        <nav class="v-nav-bar h-class">
             <label class="logo">CS-IITK</label>
             <ul class="list v-class">
                 <li class="li">Home</li>
@@ -287,13 +387,22 @@
             <div class="line"></div>
         </div>
         </nav>
+        <script>
+            var Burger = document.querySelector('.burger');
+            var List = document.querySelector('.list');
+            var navBar = document.querySelector('.v-nav-bar');
+            Burger.addEventListener('click', () => {
+                List.classList.toggle('v-class');
+                navBar.classList.toggle('h-class');
+            })
+        </script>
         <div class="set">
         <div class="intro">
             <h1 class="heading">Counselling Service</h1>
             <h2 class="sub-heading">IIT Kanpur</h2>
             <p class="info">The Counselling Service is your home away from home. We are a team of professional counsellors, empathetic students and faculty advisors to assist you emotionally and academically
             </p>
-            <button class="btn">EXPLORE OPTIONS</button>
+            <button class="btn" href="#">EXPLORE OPTIONS</button>
         </div>
         <img class="pictures" src="https://www.iitk.ac.in/counsel/assets/img/carousel/img2.jpg">
         </div>
@@ -374,5 +483,33 @@
             </p>
             </div>
             </div>
+
+            <div class="links">
+                <p class="link">© 2020 <a class="anchor" href="https://www.iitk.ac.in/" target="_blank">IIT Kanpur</a> </p>
+                <p class="link"><a class="anchor" href="https://www.iitk.ac.in/counsel/old/index.php" target="_blank">Old Website</a></p>
+                <p class="link"><button class="bttn">Developers</button></p>
+            </div>
+
+            <div class="about-devs">
+                <div class="person1">
+                    <img class="photo" src="https://www.iitk.ac.in/counsel/assets/img/developers/abhishek.jpg">
+                    <h4>Abhishek Gupta</h4>
+                    <p class="email">ft.abhishekgupta@gmail.com</p>
+                </div>
+        
+                <div class="person1">
+                    <img class="photo" src="https://www.iitk.ac.in/counsel/assets/img/developers/sarthak.jpg">
+                    <h4>Sarthak Agrawal</h4>
+                    <p class="email">asarthak@gmail.com</p>
+                </div>
+            </div>
+       
+            <script>
+                var aboutDevs = document.querySelector('.about-devs');
+        var bttn = document.querySelector('.bttn');
+        bttn.addEventListener('click', () => {
+            aboutDevs.classList.toggle('appear');
+        })
+            </script>
     </body>
 </html>
