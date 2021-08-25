@@ -42,9 +42,8 @@
     }
 
     .li:hover {
-        padding: 20px;
+        padding: 0 20px;
         color: rgb(216, 215, 215);
-        border-bottom: 3px solid white;
     }
 
     .burger {
