@@ -37,14 +37,57 @@
         color: white;
         padding: 10px;
         margin: 0px 15px;
+        text-decoration: none;
         display: inline-block;
-        transition: 1s;
+    }
+
+    .anchor2 {
+        font-size: 18px;
+        color: white;
+        text-decoration: none;
+        display: inline-block;
     }
 
     .li:hover {
-        padding: 0 20px;
         color: rgb(216, 215, 215);
     }
+
+    .dropdown {
+        display: inline-block;
+        position: relative;
+    }
+
+    .dropdown-content {
+        width: 250px;
+        padding: 10px 0px;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        background-color: white;
+        border: 2px solid white;
+        border-radius: 5px;
+    }
+
+    .anchor1 {
+        width: 100%;
+        padding: 10px 0px;
+        color: black;
+        font-size: 15px;
+        text-decoration: none;
+        display: block;
+        text-align: center;
+    }
+
+    .anchor1:hover {
+        background-color: #e3f2f5;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: flex;
+    }
+
 
     .burger {
       position: absolute;
@@ -88,9 +131,12 @@
     .info {
         color: white;
         font-size: 20px;
+        padding-bottom: 35px;
     }
 
     .btn {
+        background-color: white;
+        text-decoration: none;
         border: 2px solid white;
         border-radius: 4px;
         color: #212529;
@@ -105,7 +151,7 @@
     }
     
     .boxes {
-        margin: 50px 0px;
+        padding: 50px 0px;
         display: grid;
         grid-template-rows: auto auto auto;
         grid-template-columns: 300px 300px 300px;
@@ -122,7 +168,7 @@
     }
 
     .box:hover {
-        padding: 20px;
+        padding: 10px;
         transform: scale(1.1);
         border: 2px solid #0b3d70;
     }
@@ -293,6 +339,20 @@
             color: #172b4d;
         }
 
+        .anchor2 {
+            color: #172b4d;
+        }
+
+        .dropdown-content {
+            position: relative;
+            padding: 0px 10px;
+            margin-left: 20px;
+        }
+
+        .anchor1 {
+            text-align: left;
+        }
+
         .h-class {
             height: 60px;
         }
@@ -348,7 +408,7 @@
 
         .box {
             margin-top: 30px;
-            width: 75%;
+            width: 70%;
         }
 
         .tables {
@@ -369,14 +429,33 @@
 </style>
 
     <body>
+        <section id="introduction">
         <div class="half">
         <nav class="v-nav-bar h-class">
             <label class="logo">CS-IITK</label>
             <ul class="list v-class">
-                <li class="li">Home</li>
-                <li class="li">Student Info</li>
-                <li class="li">New Students</li>
-                <li class="li">Quick Links</li>
+                <li class="li"><a class="anchor2" href="#introduction">Home</a></li>
+                <li class="li">
+                <div class="dropdown"><a class="anchor2" href="#">Student Info</a>
+                    <div class="dropdown-content">
+                        <a href="https://www.iitk.ac.in/counsel/ug-information.php" class="anchor1">Under Graduate</a>
+                        <a href="https://www.iitk.ac.in/counsel/pg-information.php" class="anchor1">Post Graduate</a>
+                </div>
+            </div>
+            </li>
+                <li class="li"><div class="dropdown"><a class="anchor2" href="#">New Students</a>
+                    <div class="dropdown-content">
+                        <a href="https://www.iitk.ac.in/counsel/new-ug-information.php" class="anchor1">New Under Graduate</a>
+                        <a href="https://www.iitk.ac.in/counsel/new-pg-information.php" class="anchor1">New Post Graduate</a>
+                </div>
+            </div></li>
+                <li class="li"><div class="dropdown"><a class="anchor2" href="#">Quick Links</a>
+                    <div class="dropdown-content">
+                        <a href="https://www.iitk.ac.in/" class="anchor1">IIT Kanpur</a>
+                        <a href="https://www.iitk.ac.in/dosa/" class="anchor1">Dean of Student Affairs</a>
+                        <a href="https://www.iitk.ac.in/doaa/" class="anchor1">Dean of Academic Affairs</a>
+                </div>
+            </div></li>
                 <li class="li">Emergency</li>
                 <li class="li">Team</li>
             </ul>
@@ -402,12 +481,14 @@
             <h2 class="sub-heading">IIT Kanpur</h2>
             <p class="info">The Counselling Service is your home away from home. We are a team of professional counsellors, empathetic students and faculty advisors to assist you emotionally and academically
             </p>
-            <button class="btn" href="#">EXPLORE OPTIONS</button>
+            <a class="btn" href="#box-section">EXPLORE OPTIONS</a>
         </div>
         <img class="pictures" src="https://www.iitk.ac.in/counsel/assets/img/carousel/img2.jpg">
         </div>
         </div>
+        </section>
 
+        <section id="box-section">
         <div class="boxes">
             <div class="box">
             <h3 class="heading-three">SERVICES</h3>
@@ -455,6 +536,7 @@
             <button class="btn-1">Learn More</button>
             </div>
             </div>
+            </section>
 
             <div class="tables">
                 <div class="table">
