@@ -162,13 +162,13 @@
 
     .box {
         box-shadow: 5px 5px 10px #b9b6b6;
-        padding: 10px;
+        padding: 10px 10px 30px 10px;
         width: 250px;
         transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
     }
 
     .box:hover {
-        padding: 10px;
+        padding: 10px 10px 30px 10px;
         transform: scale(1.1);
         border: 2px solid #0b3d70;
     }
@@ -182,16 +182,17 @@
 
     .detail {
         color: #525f7f;
+        padding-bottom: 20px;
     }
 
     .btn-1 {
+        text-decoration: none;
         box-shadow: 3px 3px 5px #afafb9;
         border-radius: 2px;
         color: white;
         border: 2px solid #5273e4;
         background-color: #5273e4;
         padding: 12px;
-        margin-top: 20px;
         font-size: 17px;
         font-weight: 500;
     }
@@ -294,6 +295,15 @@
     height: 100px;
     width: 100px;
     border-radius: 100%;
+}
+
+.blur {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+width: 100%;
+height: 100%;
 }
 
 .appear {
@@ -493,47 +503,47 @@
             <div class="box">
             <h3 class="heading-three">SERVICES</h3>
             <p class="detail">Details about the mental health services provided by the Counselling Service.</p>
-            <button class="btn-1">Learn More</button>
+            <a class="btn-1">Learn More</a>
             </div>
             <div class="box">
             <h3 class="heading-three">GET APPOINTMENT</h3>
             <p class="detail">Get individual appointments with counsellors.</p>
-            <button class="btn-1">Book Now</button>
+            <a class="btn-1" href="https://www.iitk.ac.in/counsel/appointment.php" target="_blank">Book Now</a>
             </div>
             <div class="box">
             <h3 class="heading-three">WORRIED ABOUT SOMEONE?</h3>
             <p class="detail">Help us know them by filling an anonymous form.</p>
-            <button class="btn-1">Learn More</button>
+            <a class="btn-1" href="https://www.iitk.ac.in/counsel/referral.php" target="_blank">Learn More</a>
             </div>
             <div class="box">
             <h3 class="heading-three">REQUEST A REMEDIAL</h3>
             <p class="detail">A peer-supported academic remedial help is available by just filling a form.</p>
-            <button class="btn-1">Learn More</button>
+            <a class="btn-1" href="https://docs.google.com/forms/d/e/1FAIpQLSdgzaDEo_kO9ZxoCklpvItru0RBDD9ODfolfdTvSoF_VbNCsg/viewform">Learn More</a>
             </div>
             <div class="box">
             <h3 class="heading-three">FAMILY TREE</h3>
             <p class="detail">Have a look at how the student community exists as a family at IITK.</p>
-            <button class="btn-1">Learn More</button>
+            <a class="btn-1" href="http://iitk.ac.in/counsel/old/family_tree/index.html">Learn More</a>
             </div>
             <div class="box">
             <h3 class="heading-three">SAMVAD</h3>
             <p class="detail">A mental health initiative for community building and mental health awareness on campus.</p>
-            <button class="btn-1">Learn More</button>
+            <a class="btn-1" href="https://www.iitk.ac.in/counsel/samvad.php">Learn More</a>
             </div>
             <div class="box">
             <h3 class="heading-three">NOT SURE IF YOU NEED HELP?</h3>
             <p class="detail">Online tools to evaluate your mental health.</p>
-            <button class="btn-1">Learn More</button>
+            <a class="btn-1" href="">Learn More</a>
             </div>
             <div class="box">
             <h3 class="heading-three">FAQ</h3>
             <p class="detail">Some common concerns we come across on a regular basis.</p>
-            <button class="btn-1">Learn More</button>
+            <a class="btn-1" href="https://www.iitk.ac.in/counsel/faq.php" target="_blank">Learn More</a>
             </div>
             <div class="box">
             <h3 class="heading-three">AWARENESS VIDEOS</h3>
             <p class="detail">Short videos to help you learn more about mental health.</p>
-            <button class="btn-1">Learn More</button>
+            <a class="btn-1" href="https://www.iitk.ac.in/counsel/MHvideos.php" target="_blank">Learn More</a>
             </div>
             </div>
             </section>
@@ -588,10 +598,16 @@
        
             <script>
                 var aboutDevs = document.querySelector('.about-devs');
+                var Blur = document.querySelector('.blur');
         var bttn = document.querySelector('.bttn');
         bttn.addEventListener('click', () => {
+            //Blur.classList.toggle('appear');
             aboutDevs.classList.toggle('appear');
         })
+
+        /*aboutDevs.addEventListener('click', () => {
+            aboutDevs.classList.toggle('appear');
+        })*/
             </script>
     </body>
 </html>
