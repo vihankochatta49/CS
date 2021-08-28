@@ -51,7 +51,7 @@
     }
 
     .anchor2 {
-        font-size: 18px;
+        font-size: 1rem;
         color: white;
         text-decoration: none;
         display: inline-block;
@@ -199,6 +199,7 @@
         display: inline-flex;
         justify-content: center;
         align-items: center;
+        margin-left: 5px;
         padding: 12px;
         height: 25px;
         width: 25px;
@@ -225,6 +226,7 @@
     }
 
     .btn-1 {
+        cursor: pointer;
         text-decoration: none;
         box-shadow: 3px 3px 5px #afafb9;
         border-radius: 2px;
@@ -234,6 +236,51 @@
         padding: 12px;
         font-size: 17px;
         font-weight: 500;
+    }
+
+    .services {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(to bottom right, #f5365c,  #fb6340); 
+        padding: 20px 40px;
+    }
+
+    .services1 {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(to bottom right, #f5365c,  #fb6340); 
+        padding: 20px 40px;
+    }
+
+    .service {
+        width: 100%;
+        height: 35px;
+        margin: 10px;
+        background-color: #f4f5f7;
+        border: 1px solid #f4f5f7;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .anchor5 {
+        color: #212529;
+        font-size: 14px;
+        font-family: sans-serif;
+        text-decoration: none;
     }
 
     .tables {
@@ -316,12 +363,6 @@
 
     .facebook {
         height: 406px;
-        overflow: auto;
-    }
-
-    iframe {
-        height: 654px !important;
-        width: 280px !important;
     }
 
     .links {
@@ -367,7 +408,7 @@
         left: 50%;
         opacity: 0;
         transform: translate(-50%, -50%);
-        background-image: linear-gradient(to bottom right, #4743EF, #d4418e);
+        background-image: linear-gradient(to bottom right, #f5365c,  #fb6340);
         display: none;
         justify-content: center;
         align-items: center;
@@ -405,8 +446,21 @@
         right: 10px;
     }
 
+    .cross1 {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        cursor: pointer;
+    }
 
-    @media screen and (max-width: 1250px) {
+    .cross2 {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 1135px) {
 
         body {
             width: 100%;
@@ -533,6 +587,14 @@
             width: 70%;
         }
 
+        .services {
+            width: 65%;
+        }
+
+        .services1 {
+            width: 65%;
+        }
+
         .tables {
             display: flex;
             flex-direction: column;
@@ -639,7 +701,7 @@
                 <div class="icons"><i class="far fa-life-ring"></i></div>
                 <h3 class="heading-three">SERVICES</h3>
                 <p class="detail">Details about the mental health services provided by the Counselling Service.</p>
-                <a class="btn-1">Learn More</a>
+                <a class="btn-1" onclick="appearFunction()">Learn More</a>
             </div>
             <div class="box">
                 <div class="icons"><i class="far fa-calendar-alt"></i></div>
@@ -678,7 +740,7 @@
                 <div class="icons"><i class="fas fa-lightbulb"></i></div>
                 <h3 class="heading-three">NOT SURE IF YOU NEED HELP?</h3>
                 <p class="detail">Online tools to evaluate your mental health.</p>
-                <a class="btn-1" href="">Learn More</a>
+                <a class="btn-1" onclick="appearFunctionOne()">Learn More</a>
             </div>
             <div class="box">
                 <div class="icons"><i class="fas fa-list-ul"></i></div>
@@ -734,11 +796,7 @@
             </div>
         </div>
     <div class="facebook">
-        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FCounsellingServiceIitKanpur%2Fposts%2F4603255356351497&show_text=true&width=500" height="260px" style="border:none;overflow:scroll"  frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FCounsellingServiceIitKanpur%2Fposts%2F4577689988908034&show_text=true&width=500" height="260px" style="border:none;overflow:scroll" scrolling="yes" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FCounsellingServiceIitKanpur%2Fposts%2F4572981666045533&show_text=true&width=500" width="500" height="645" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FCounsellingServiceIitKanpur%2Fposts%2F4555253341151699&show_text=true&width=500" width="500" height="683" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-        <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FCounsellingServiceIitKanpur%2Fvideos%2F1037430343758352%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FCounsellingServiceIitKanpur%2F&tabs=timeline&width=300&height=400&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=true&appId" width="300" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
     </div>
     </div>
     </div>
@@ -755,17 +813,58 @@
     <div class="about-devs">
         <div class="person1">
             <img class="photo" src="https://www.iitk.ac.in/counsel/assets/img/developers/abhishek.jpg">
-            <h4>Abhishek Gupta</h4>
+            <h4 style="margin: 10px;">Abhishek Gupta</h4>
             <p class="email">ft.abhishekgupta@gmail.com</p>
+            <div class="icons3">
+                <i class="fab fa-facebook-square" style="margin: 5px; font-size: 20px;"></i>
+                <i class="fab fa-github-square" style="margin: 5px; font-size: 20px;"></i>
+                <i class="fab fa-linkedin" style="margin: 5px; font-size: 20px;"></i>
+            </div>
         </div>
 
         <div class="person1">
             <div class="cross"><i class="fas fa-times" style="font-size: 30px; cursor: pointer;"></i></div>
             <img class="photo" src="https://www.iitk.ac.in/counsel/assets/img/developers/sarthak.jpg">
-            <h4>Sarthak Agrawal</h4>
+            <h4 style="margin: 10px;">Sarthak Agrawal</h4>
             <p class="email">asarthak@gmail.com</p>
+            <div class="icons3">
+                <i class="fab fa-facebook-square" style="margin: 5px; font-size: 20px;"></i>
+                <i class="fab fa-github-square" style="margin: 5px; font-size: 20px;"></i>
+                <i class="fab fa-linkedin" style="margin: 5px; font-size: 20px;"></i>
+            </div>
         </div>
     </div>
+
+    <div class="services">
+        <div class="service">
+            
+        <div class="cross1"><i class="fas fa-times" style="font-size: 30px; color: white;"></i></div>
+            <a class="anchor5" href="#">DE-ADDITION CLINIC</a>
+        </div>
+        <div class="service">
+            <a class="anchor5" href="#">MENTAL HEALTH SUPPORT</a>
+        </div>
+        <div class="service">
+            <a class="anchor5" href="#">WORKSHOP AND SESSIONS</a>
+        </div>
+        <div class="service">
+            <a class="anchor5" href="#">ACADEMIC SUPPORT</a>
+        </div>
+        <div class="service">
+            <a class="anchor5" href="#">BECAUSE YOU MATTER</a>
+        </div>
+    </div>
+
+    <div class="services1">
+        <div class="service">
+            <div class="cross2"><i class="fas fa-times" style="font-size: 30px; color: white;"></i></div>
+            <a class="anchor5" href="#">EVALUATE YOUR PSYCHOLOGY STATE</a>
+        </div>
+        <div class="service">
+            <a class="anchor5" href="#">INTERNET ADDICTION TEST</a>
+        </div>
+    </div>
+
 
     <script>
         var aboutDevs = document.querySelector('.about-devs');
@@ -780,13 +879,40 @@
 
         cross.addEventListener('click', () => {
             aboutDevs.classList.toggle('appear');
+        });
+
+        var services = document.querySelector('.services');
+        var servicesA = document.querySelector('.services1');
+        var crossA = document.querySelector('.cross1');
+        var crossB = document.querySelector('.cross2');
+
+        crossA.addEventListener('click', () => {
+            services.classList.toggle('appear');
+        });
+
+        crossB.addEventListener('click', () => {
+            servicesA.classList.toggle('appear');
         })
+
+        function appearFunctionOne() {
+            servicesA.classList.toggle('appear');
+        }
+
+        function appearFunction() {
+            services.classList.toggle('appear');
+        };
 
 
         /*aboutDevs.addEventListener('click', () => {
             aboutDevs.classList.toggle('appear');
         })*/
     </script>
+
+<!--    <script>
+        function goFunction() {
+            alert("aaoo");
+        }
+    </script>-->
 </body>
 
 </html>
