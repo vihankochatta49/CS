@@ -57,13 +57,12 @@
         display: inline-block;
     }
 
-    .li:hover {
+    .anchor2:hover {
         color: rgb(216, 215, 215);
     }
 
     .li1 {
         display: inline-block;
-        margin-left: 10px;
     }
 
     .anchor3 {
@@ -72,13 +71,14 @@
     }
 
     .dropdown {
+        padding: 10px;
         display: inline-block;
         position: relative;
     }
 
     .dropdown-content {
         width: 250px;
-        padding: 10px 0px;
+        padding: 5px 0px;
         display: none;
         flex-direction: column;
         justify-content: center;
@@ -87,6 +87,52 @@
         background-color: white;
         border: 2px solid white;
         border-radius: 5px;
+        margin-top: 15px;
+    }
+
+    .dropdown-content1 {
+        padding: 5px;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: -45px;
+        background-color: black;
+        opacity: 0.82;
+        border: 2px solid black;
+        border-radius: 5px;
+        margin-top: 15px;
+    }
+
+    .arrow-top:before {
+        content: " ";
+        position: absolute;
+        left: 30px;
+        top: -15px;
+        border-top: none;
+        border-right: 15px solid transparent;
+        border-left: 15px solid transparent;
+        border-bottom: 15px solid white;
+    }
+
+    .arrow-top1:before {
+        content: " ";
+        position: absolute;
+        left: 37%;
+        top: -15px;
+        border-top: none;
+        border-right: 15px solid transparent;
+        border-left: 15px solid transparent;
+        border-bottom: 15px solid black;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: flex;
+    }
+
+    .dropdown:hover .dropdown-content1 {
+        display: flex;
     }
 
     .anchor1 {
@@ -102,11 +148,6 @@
     .anchor1:hover {
         background-color: #e3f2f5;
     }
-
-    .dropdown:hover .dropdown-content {
-        display: flex;
-    }
-
 
     .burger {
         position: absolute;
@@ -174,32 +215,32 @@
 
     .icons7 {
         position: absolute;
-        right: 5px;
+        right: 15px;
+        top: 50%;
+    }
+
+    .icons8 {
+        position: absolute;
+        left: 15px;
         top: 50%;
     }
 
     .fa-chevron-left {
-    font-size: 30px; 
-    color: rgba(255, 255, 255, 0.42);
-    }
-
-    .fa-chevron-right {
-    font-size: 30px; 
-    color: rgba(255, 255, 255, 0.42);
-    }
-
-    .fa-chevron-right:hover {
-        color: white;
+        font-size: 35px !important;
+        color: rgba(255, 255, 255, 0.42);
     }
 
     .fa-chevron-left:hover {
         color: white;
     }
 
-    .icons8 {
-        position: absolute;
-        left: 5px;
-        top: 50%;
+    .fa-chevron-right {
+        font-size: 35px !important;
+        color: rgba(255, 255, 255, 0.42);
+    }
+
+    .fa-chevron-right:hover {
+        color: white;
     }
 
     .bars {
@@ -214,9 +255,13 @@
 
     .bar {
         margin-left: 3px;
-        height: 5px;
-        width: 5%;
+        height: 3px;
+        width: 4%;
         background-color: rgba(255, 255, 255, 0.42);
+    }
+
+    .glow {
+        background-color: white;
     }
 
     .boxes {
@@ -289,6 +334,7 @@
     }
 
     .services {
+        width: 30%;
         position: fixed;
         top: 50%;
         left: 50%;
@@ -297,11 +343,12 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-image: linear-gradient(to bottom right, #f5365c,  #fb6340); 
+        background-image: linear-gradient(to bottom right, #f5365c, #fb6340);
         padding: 20px 40px;
     }
 
     .services1 {
+        width: 30%;
         position: fixed;
         top: 50%;
         left: 50%;
@@ -310,7 +357,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-image: linear-gradient(to bottom right, #f5365c,  #fb6340); 
+        background-image: linear-gradient(to bottom right, #f5365c, #fb6340);
         padding: 20px 40px;
     }
 
@@ -444,7 +491,7 @@
         background-color: #f4f5f7;
         font-size: 15px;
         border: none;
-        color: #212529;
+        color: #525f7f;
     }
 
     .bttn:hover {
@@ -458,7 +505,7 @@
         left: 50%;
         opacity: 0;
         transform: translate(-50%, -50%);
-        background-image: linear-gradient(to bottom right, #f5365c,  #fb6340);
+        background-image: linear-gradient(to bottom right, #f5365c, #fb6340);
         display: none;
         justify-content: center;
         align-items: center;
@@ -510,7 +557,7 @@
         cursor: pointer;
     }
 
-    @media screen and (max-width: 1135px) {
+    @media screen and (max-width: 1135px) { /*for small screen*/
 
         body {
             width: 100%;
@@ -521,7 +568,6 @@
         }
 
         .v-nav-bar {
-
             flex-direction: column;
             align-items: baseline;
             justify-content: end;
@@ -548,7 +594,7 @@
             color: #172b4d;
         }
 
-        
+
         .fa-address-book {
             padding-right: 10px;
             font-size: 20px;
@@ -561,7 +607,6 @@
 
         .li1 {
             margin: 0px 10px 10px 10px;
-
         }
 
         .anchor3 {
@@ -569,10 +614,18 @@
             color: #172b4d;
         }
 
+        .dropdown {
+            padding: 0px;
+        }
+
         .dropdown-content {
             position: relative;
             padding: 0px 10px;
             margin-left: 20px;
+        }
+
+        .dropdown:hover .dropdown-content1 {
+            display: none;
         }
 
         .anchor1 {
@@ -603,6 +656,7 @@
             padding-left: 0px;
             margin-left: 0px;
             margin-right: 0px;
+            margin-bottom: 70px;
         }
 
         .heading {
@@ -624,7 +678,6 @@
         .pictures {
             height: 200px;
             margin-left: 0px;
-            margin-top: 70px;
         }
 
         .boxes {
@@ -662,67 +715,146 @@
 </style>
 
 <body onload="startTimer()">
+
     <section id="introduction">
         <div class="half">
+
             <nav class="v-nav-bar h-class">
-                <label class="logo"><img src="https://www.iitk.ac.in/counsel/assets/img/brand/white.png"
-                        height="30px"></label>
+                <!--top nav bar-->
+
+                <label class="logo"><a href="#"><img src="https://www.iitk.ac.in/counsel/assets/img/brand/white.png"
+                        height="30px"></a></label>
+                <!--logo image-->
+
                 <ul class="list v-class">
-                    <li class="li"><i class="far fa-address-book"></i><a class="anchor2" href="#introduction">Home</a></li>
+
+                    <li class="li"><i class="far fa-address-book"></i><a class="anchor2" href="#introduction">Home</a>
+                    </li>
+                    <!--home-->
+
                     <li class="li">
-                        <div class="dropdown"><i class="far fa-address-book"></i><a class="anchor2" href="#">Student Info</a>
-                            <div class="dropdown-content">
-                                <a href="https://www.iitk.ac.in/counsel/ug-information.php" class="anchor1">Under
+                        <!--Student info-->
+
+                        <div class="dropdown"><i class="far fa-address-book"></i><a class="anchor2" href="#">Student
+                                Info</a>
+                            <div class="dropdown-content arrow-top">
+                                <a href="https://www.iitk.ac.in/counsel/ug-information.php" class="anchor1" target="_blank">Under
                                     Graduate</a>
-                                <a href="https://www.iitk.ac.in/counsel/pg-information.php" class="anchor1">Post
+                                <a href="https://www.iitk.ac.in/counsel/pg-information.php" class="anchor1" target="_blank">Post
                                     Graduate</a>
                             </div>
                         </div>
+
                     </li>
+
                     <li class="li">
-                        <div class="dropdown"><i class="far fa-address-book"></i><a class="anchor2" href="#">New Students</a>
-                            <div class="dropdown-content">
-                                <a href="https://www.iitk.ac.in/counsel/new-ug-information.php" class="anchor1">New
+                        <!-- new students-->
+
+                        <div class="dropdown"><i class="far fa-address-book"></i><a class="anchor2" href="#">New
+                                Students</a>
+                            <div class="dropdown-content arrow-top">
+                                <a href="https://www.iitk.ac.in/counsel/new-ug-information.php" class="anchor1" target="_blank">New
                                     Under Graduate</a>
-                                <a href="https://www.iitk.ac.in/counsel/new-pg-information.php" class="anchor1">New Post
+                                <a href="https://www.iitk.ac.in/counsel/new-pg-information.php" class="anchor1" target="_blank">New Post
                                     Graduate</a>
                             </div>
                         </div>
+
                     </li>
+
                     <li class="li">
-                        <div class="dropdown"><i class="far fa-address-book"></i><a class="anchor2" href="#">Quick Links</a>
-                            <div class="dropdown-content">
-                                <a href="https://www.iitk.ac.in/" class="anchor1">IIT Kanpur</a>
-                                <a href="https://www.iitk.ac.in/dosa/" class="anchor1">Dean of Student Affairs</a>
-                                <a href="https://www.iitk.ac.in/doaa/" class="anchor1">Dean of Academic Affairs</a>
+                        <!--quick links-->
+
+                        <div class="dropdown"><i class="far fa-address-book"></i><a class="anchor2" href="#">Quick
+                                Links</a>
+
+                            <div class="dropdown-content arrow-top">
+                                <a href="https://www.iitk.ac.in/" class="anchor1" target="_blank">IIT Kanpur</a>
+                                <a href="https://www.iitk.ac.in/dosa/" class="anchor1" target="_blank">Dean of Student Affairs</a>
+                                <a href="https://www.iitk.ac.in/doaa/" class="anchor1" target="_blank">Dean of Academic Affairs</a>
                             </div>
+
                         </div>
+
                     </li>
-                    <li class="li"><i class="far fa-address-book"></i>Emergency</li>
-                    <li class="li"><i class="far fa-address-book"></i>Team</li>
-                    <li class="li">
-                        <ul style="margin: 0px; padding: 0px;
-                    text-align: center;">
-                            <li class="li1"><a class="anchor3" href="https://www.instagram.com/counsellingserviceiitk/" title="Follow us on Instagram"><i
-                                        class="fab fa-instagram"></i></a></li>
-                            <li class="li1"><a class="anchor3" href="https://www.facebook.com/CounsellingServiceIitKanpur" title="Like us on Facebook"><i
-                                        class="fab fa-facebook"></i></a></li>
-                            <li class="li1"><a class="anchor3" href="https://www.youtube.com/channel/UCRwww9qZ5Ec5jLIiBkaoXvA" title="Subscribe us on Youtube"><i
-                                        class="fab fa-youtube"></i></a></li>
-                            <li class="li1"><a class="anchor3" href="https://medium.com/@csiitk" title="Follow us on medium"><i
-                                        class="fab fa-medium"></i></a></li>
+
+                    <li class="li"><i class="far fa-address-book"></i><a class="anchor2"
+                            href="https://www.iitk.ac.in/counsel/emergency.php">Emergency</a></li>
+                    <!--emergency-->
+
+                    <li class="li"><i class="far fa-address-book"></i><a class="anchor2"
+                            href="https://www.iitk.ac.in/counsel/team.php">Team</a></li>
+                    <!--team-->
+
+                    <li class="li"> <!--social media icons-->
+                        <ul style="margin: 0px; padding: 0px;text-align: center;">
+
+                            <li class="li1">
+
+                                <div class="dropdown">
+                                    <!--insta-->
+                                    <a class="anchor3" href="https://www.instagram.com/counsellingserviceiitk/">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                    <div class="dropdown-content1 arrow-top1">
+                                        <p style="width: 115px; font-size: 15px">Follow us on instagram</p>
+                                    </div>
+                                </div>
+
+                            </li>
+
+                            <li class="li1">
+                                <!--facebook-->
+
+                                <div class="dropdown"><a class="anchor3"
+                                        href="https://www.facebook.com/CounsellingServiceIitKanpur"><i
+                                            class="fab fa-facebook"></i></a>
+                                    <div class="dropdown-content1 arrow-top1">
+                                        <p style="width: 115px; font-size: 15px">Like us on Facebook</p>
+                                    </div>
+                                </div>
+
+                            </li>
+
+                            <li class="li1">
+                                <!--youtube-->
+
+                                <div class="dropdown"><a class="anchor3"
+                                        href="https://www.youtube.com/channel/UCRwww9qZ5Ec5jLIiBkaoXvA"><i
+                                            class="fab fa-youtube"></i></a>
+                                    <div class="dropdown-content1 arrow-top1">
+                                        <p style="width: 115px; font-size: 15px">Subscribe us on Youtube</p>
+                                    </div>
+                                </div>
+
+                            </li>
+
+                            <li class="li1">
+                                <!--medium-->
+
+                                <div class="dropdown"><a class="anchor3" href="https://medium.com/@csiitk"><i
+                                            class="fab fa-medium"></i></a>
+                                    <div class="dropdown-content1 arrow-top1">
+                                        <p style="width: 115px; font-size: 15px">Follow us on medium</p>
+                                    </div>
+                                </div>
+
+                            </li>
                         </ul>
                     </li>
                 </ul>
 
                 <div class="burger">
                     <!--burger-->
+
                     <div class="line"></div>
                     <div class="line"></div>
                     <div class="line"></div>
+
                 </div>
             </nav>
-            <script>
+
+            <script> // burger script
                 var Burger = document.querySelector('.burger');
                 var List = document.querySelector('.list');
                 var navBar = document.querySelector('.v-nav-bar');
@@ -731,8 +863,12 @@
                     navBar.classList.toggle('h-class');
                 })
             </script>
+
             <div class="set">
+                <!--text and pictures-->
+
                 <div class="intro">
+                    <!--text-->
                     <h1 class="heading">Counselling Service</h1>
                     <h2 class="sub-heading">IIT Kanpur</h2>
                     <p class="info">The Counselling Service is your home away from home. We are a team of professional
@@ -740,69 +876,124 @@
                     </p>
                     <a class="btn" href="#box-section">EXPLORE OPTIONS</a>
                 </div>
+
                 <div class="container1">
-                <img class="pictures" src="https://www.iitk.ac.in/counsel/assets/img/carousel/img2.jpg">
-                <div class="icons7"><i onclick="displayNextImage()" class="fas fa-chevron-right"></i></div>
-                <div class="icons8"><i onclick="displayPreviousImage()" class="fas fa-chevron-left"></i></div>
-            <div class="bars">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
+                    <!--images-->
+                    <img class="pictures pics" src="https://www.iitk.ac.in/counsel/assets/img/carousel/img2.jpg">
+                    <div class="icons7"><i onclick="displayNextImage()" class="fas fa-chevron-right"></i></div>
+                    <!--right arrow-->
+                    <div class="icons8"><i onclick="displayPreviousImage()" class="fas fa-chevron-left"></i></div>
+                    <!--left arrow-->
+
+                    <div class="bars">
+                        <!--bars on pictures-->
+                        <div class="bar glow"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+
                 </div>
             </div>
         </div>
     </section>
 
-    <script>
-        var x = -1;
+    <script> // changing pictures
+        var x = 0;
         var pictures = document.querySelector('.pictures');
-    var images = ['https://www.iitk.ac.in/counsel/assets/img/carousel/img5.jpg', 'https://www.iitk.ac.in/counsel/assets/img/carousel/img12.jpg', 'https://www.iitk.ac.in/counsel/assets/img/carousel/img1.jpg', 'https://www.iitk.ac.in/counsel/assets/img/carousel/img14.jpg', 'https://www.iitk.ac.in/counsel/assets/img/carousel/img13.jpg', 'https://www.iitk.ac.in/counsel/assets/img/carousel/img11.jpg', 'https://www.iitk.ac.in/counsel/assets/img/carousel/img10.jpg', 'https://www.iitk.ac.in/counsel/assets/img/carousel/img8.jpg', 'https://www.iitk.ac.in/counsel/assets/img/carousel/img9.jpg', 'https://www.iitk.ac.in/counsel/assets/img/carousel/img3.jpg']
-    
-    function displayNextImage() {
-              x = (x === images.length - 1) ? 0 : x + 1;
-              pictures.src = images[x];
-          }
+        var pics = document.querySelector('.pics');
+        var bars = document.querySelectorAll(".bar");
+        var images = ['https://www.iitk.ac.in/counsel/assets/img/carousel/img2.jpg', 'https://www.iitk.ac.in/counsel/assets/img/carousel/img4.jpg', 'https://www.iitk.ac.in/counsel/assets/img/carousel/img7.jpg', 'https://www.iitk.ac.in/counsel/assets/img/carousel/img5.jpg', 'https://www.iitk.ac.in/counsel/assets/img/carousel/img12.jpg', 'https://www.iitk.ac.in/counsel/assets/img/carousel/img1.jpg', 'https://www.iitk.ac.in/counsel/assets/img/carousel/img14.jpg', 'https://www.iitk.ac.in/counsel/assets/img/carousel/img13.jpg', 'https://www.iitk.ac.in/counsel/assets/img/carousel/img11.jpg', 'https://www.iitk.ac.in/counsel/assets/img/carousel/img10.jpg', 'https://www.iitk.ac.in/counsel/assets/img/carousel/img8.jpg', 'https://www.iitk.ac.in/counsel/assets/img/carousel/img9.jpg', 'https://www.iitk.ac.in/counsel/assets/img/carousel/img3.jpg']
 
-          function displayPreviousImage() {
-              x = (x <= 0) ? images.length - 1 : x - 1;
-              pictures.src = images[x];
-          }
+        function displayNextImage() {
+            x = (x === images.length - 1) ? 0 : x + 1;
+            pics.src = images[x];
+            bars.forEach(bar => bar.classList.remove('glow'));
+            bars[x].classList.add("glow");
+        }
 
-          function startTimer() {
-              setInterval(displayNextImage, 5000);
-          }
+        function displayPreviousImage() {
+            x = (x <= 0) ? images.length - 1 : x - 1;
+            pics.src = images[x];
+            bars.forEach(bar => bar.classList.remove('glow'));
+            bars[x].classList.add("glow");
+        }
+
+
+        function startTimer() {
+            setInterval(displayNextImage, 8000);
+        }
 
     </script>
 
     <section id="box-section">
+        <!--boxes-->
         <div class="boxes">
+
             <div class="box">
+                <!--services-->
                 <div class="icons"><i class="far fa-life-ring"></i></div>
                 <h3 class="heading-three">SERVICES</h3>
                 <p class="detail">Details about the mental health services provided by the Counselling Service.</p>
                 <a class="btn-1" onclick="appearFunction()">Learn More</a>
             </div>
+
+            <div class="services">
+                <!--for services box-->
+
+                <div class="service">
+                    <div class="cross1"><i class="fas fa-times" style="font-size: 30px; color: white;"></i></div>
+                    <a class="anchor5" href="https://www.iitk.ac.in/counsel/deaddiction.php">DE-ADDITION CLINIC</a>
+                </div>
+
+                <div class="service">
+                    <a class="anchor5" href="https://www.iitk.ac.in/counsel/mental-health-support.php">MENTAL HEALTH
+                        SUPPORT</a>
+                </div>
+
+                <div class="service">
+                    <a class="anchor5" href="https://www.iitk.ac.in/counsel/workshop-sessions.php">WORKSHOP AND
+                        SESSIONS</a>
+                </div>
+
+                <div class="service">
+                    <a class="anchor5" href="https://www.iitk.ac.in/counsel/academic-support.php">ACADEMIC SUPPORT</a>
+                </div>
+
+                <div class="service">
+                    <a class="anchor5" href="https://www.iitk.ac.in/counsel/because-you-matter.php">BECAUSE YOU
+                        MATTER</a>
+                </div>
+
+            </div>
+
             <div class="box">
+                <!--get appointment-->
                 <div class="icons"><i class="far fa-calendar-alt"></i></div>
                 <h3 class="heading-three">GET APPOINTMENT</h3>
                 <p class="detail">Get individual appointments with counsellors.</p>
                 <a class="btn-1" href="https://www.iitk.ac.in/counsel/appointment.php" target="_blank">Book Now</a>
             </div>
+
             <div class="box">
+                <!--woried abot someone?-->
                 <div class="icons"><i class="fas fa-tag"></i></div>
                 <h3 class="heading-three">WORRIED ABOUT SOMEONE?</h3>
                 <p class="detail">Help us know them by filling an anonymous form.</p>
                 <a class="btn-1" href="https://www.iitk.ac.in/counsel/referral.php" target="_blank">Learn More</a>
             </div>
+
             <div class="box">
+                <!--request a remedial-->
                 <div class="icons"><i class="fas fa-book"></i></div>
                 <h3 class="heading-three">REQUEST A REMEDIAL</h3>
                 <p class="detail">A peer-supported academic remedial help is available by just filling a form.</p>
@@ -810,150 +1001,182 @@
                     href="https://docs.google.com/forms/d/e/1FAIpQLSdgzaDEo_kO9ZxoCklpvItru0RBDD9ODfolfdTvSoF_VbNCsg/viewform">Learn
                     More</a>
             </div>
+
             <div class="box">
+                <!--family tree-->
                 <div class="icons"><i class="fas fa-user-circle"></i></div>
                 <h3 class="heading-three">FAMILY TREE</h3>
                 <p class="detail">Have a look at how the student community exists as a family at IITK.</p>
                 <a class="btn-1" href="http://iitk.ac.in/counsel/old/family_tree/index.html">Learn More</a>
             </div>
+
             <div class="box">
+                <!--samvad-->
                 <div class="icons"><i class="fas fa-medkit"></i></div>
                 <h3 class="heading-three">SAMVAD</h3>
                 <p class="detail">A mental health initiative for community building and mental health awareness on
                     campus.</p>
                 <a class="btn-1" href="https://www.iitk.ac.in/counsel/samvad.php">Learn More</a>
             </div>
+
             <div class="box">
+                <!--not sure if ...-->
                 <div class="icons"><i class="fas fa-lightbulb"></i></div>
                 <h3 class="heading-three">NOT SURE IF YOU NEED HELP?</h3>
                 <p class="detail">Online tools to evaluate your mental health.</p>
                 <a class="btn-1" onclick="appearFunctionOne()">Learn More</a>
             </div>
+
+            <div class="services1">
+                <!--for not sure you need help box-->
+
+                <div class="service">
+                    <div class="cross2"><i class="fas fa-times" style="font-size: 30px; color: white;"></i></div>
+                    <a class="anchor5" href="https://www.iitk.ac.in/counsel/psytool.php">EVALUATE YOUR PSYCHOLOGY
+                        STATE</a>
+                </div>
+
+                <div class="service">
+                    <a class="anchor5" href="https://www.iitk.ac.in/counsel/resources/IATManual.pdf">INTERNET ADDICTION
+                        TEST</a>
+                </div>
+
+            </div>
+
             <div class="box">
+                <!--FAQ-->
                 <div class="icons"><i class="fas fa-list-ul"></i></div>
                 <h3 class="heading-three">FAQ</h3>
                 <p class="detail">Some common concerns we come across on a regular basis.</p>
                 <a class="btn-1" href="https://www.iitk.ac.in/counsel/faq.php" target="_blank">Learn More</a>
             </div>
+
             <div class="box">
+                <!--awareness video-->
                 <div class="icons"><i class="fas fa-play"></i></div>
                 <h3 class="heading-three">AWARENESS VIDEOS</h3>
                 <p class="detail">Short videos to help you learn more about mental health.</p>
                 <a class="btn-1" href="https://www.iitk.ac.in/counsel/MHvideos.php" target="_blank">Learn More</a>
             </div>
+
         </div>
     </section>
 
-    <div class="tables">
-        <div class="table">
-            <div class="heading-table">
-                <h4 class="table-heading">Address</h4>
+    <section>
+        <div class="tables">
+            <!--address-->
+            <div class="table">
+                <div class="heading-table">
+                    <h4 class="table-heading">Address</h4>
+                </div>
+                <p class="about-us"><b>Counselling Service</b><br>
+                    House No. 503<br>
+                    Type V<br>
+                    IIT Kanpur<br>
+                    208016<br><br>
+                    <b>Office Timings:</b><br>
+                    11:00 AM - 7:00 PM (Mon to Fri)<br>
+                    <b>Phone:</b><br>
+                    +91 512 2597784<br>
+                    <b>Email:</b><br>
+                    head_cs@iitk.ac.in (Head, Counselling Service)<br>
+                    counselor@iitk.ac.in (Appointments)
+                </p>
             </div>
-            <p class="about-us"><b>Counselling Service</b><br>
-                House No. 503<br>
-                Type V<br>
-                IIT Kanpur<br>
-                208016<br><br>
-                <b>Office Timings:</b><br>
-                11:00 AM - 7:00 PM (Mon to Fri)<br>
-                <b>Phone:</b><br>
-                +91 512 2597784<br>
-                <b>Email:</b><br>
-                head_cs@iitk.ac.in (Head, Counselling Service)<br>
-                counselor@iitk.ac.in (Appointments)
-            </p>
-        </div>
 
-        <div class="table">
-            <div class="heading-table">
-                <h4 class="table-heading">NEWS FEED</h4>
+            <div class="table">
+                <!--news feed-->
+                <div class="heading-table">
+                    <h4 class="table-heading">NEWS FEED</h4>
+                </div>
+                <p class="about-us">- Welcome to the new website of <b>Counselling Service IIT Kanpur</b>
+                </p>
             </div>
-            <p class="about-us">- Welcome to the new website of <b>Counselling Service IIT Kanpur</b>
-            </p>
-        </div>
 
-        <div class="table">
-            <div class="conatiner">
-            <img width = "100%" src="https://scontent.fidr4-1.fna.fbcdn.net/v/t1.6435-9/s320x320/68589460_2624921037518282_9073434174500634624_n.png?_nc_cat=100&ccb=1-5&_nc_sid=dd9801&_nc_ohc=38-TMqY7LAUAX-RicsX&_nc_ht=scontent.fidr4-1.fna&edm=ALBQ-WsEAAAA&oh=977ae2a2fb3daf338e01b3021b05728b&oe=614FFBCD">
-            <div class="fbpage">
-                <img class="logo2" src="https://scontent.fidr4-1.fna.fbcdn.net/v/t31.18172-1/cp0/c1.0.50.50a/p50x50/10514244_803875646289506_5459228464975966540_o.png?_nc_cat=102&ccb=1-5&_nc_sid=dbb9e7&_nc_ohc=bjGsIVT67RYAX_-gPIn&_nc_ht=scontent.fidr4-1.fna&edm=ALBQ-WsEAAAA&oh=22082dcf810ad9c06eeea65e0f0273b0&oe=614FB8D2">
-             <div style="margin-left: 5px;"><p class="like-us">Counselling Service, IIT ...</p>
-            <div style="display: flex; align-items: center;"><a class="btn5" href="https://www.facebook.com/login.php?next=https%3A%2F%2Fwww.facebook.com%2Fplugins%2Ferror%2Fconfirm%2Fpage%3Fiframe_referer%26kid_directed_site%3Dfalse%26secure%3Dtrue%26plugin%3Dpage%26return_params%3D%257B%2522adapt_container_width%2522%253A%2522true%2522%252C%2522app_id%2522%253A%2522%2522%252C%2522channel%2522%253A%2522https%253A%252F%252Fstaticxx.facebook.com%252Fx%252Fconnect%252Fxd_arbiter%252F%253Fversion%253D46%2523cb%253Df22ede1372085b8%2526domain%253Dwww.iitk.ac.in%2526is_canvas%253Dfalse%2526origin%253Dhttps%25253A%25252F%25252Fwww.iitk.ac.in%25252Ff34824cfe152d14%2526relation%253Dparent.parent%2522%252C%2522container_width%2522%253A%2522317%2522%252C%2522height%2522%253A%2522460%2522%252C%2522hide_cover%2522%253A%2522false%2522%252C%2522href%2522%253A%2522https%253A%252F%252Fwww.facebook.com%252FCounsellingServiceIitKanpur%2522%252C%2522locale%2522%253A%2522en_US%2522%252C%2522sdk%2522%253A%2522joey%2522%252C%2522show_facepile%2522%253A%2522true%2522%252C%2522small_header%2522%253A%2522true%2522%252C%2522tabs%2522%253A%2522timeline%2522%252C%2522width%2522%253A%2522400%2522%252C%2522ret%2522%253A%2522sentry%2522%252C%2522act%2522%253Anull%257D"
-            ><i class="fab fa-facebook-square" style="margin-right: 5px;"></i>Like Page</a><p style="font-size: 12px; margin: 0px 0px 0px 5px; color: white;">7.3K likes</p></div></div>
-            </div>
-        </div>
-    <div class="facebook">
-        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FCounsellingServiceIitKanpur%2F&tabs=timeline&width=300&height=400&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=true&appId" width="300" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-    </div>
-    </div>
-    </div>
-
-
-    <div class="links">
-        <p class="link"><i class="far fa-copyright" style="font-size: 15px;"></i> 2020 <a class="anchor"
-                href="https://www.iitk.ac.in/" target="_blank">IIT Kanpur</a> </p>
-        <p class="link"><a class="anchor" href="https://www.iitk.ac.in/counsel/old/index.php" target="_blank">Old
-                Website</a></p>
-        <p class="link"><button class="bttn">Developers</button></p>
-    </div>
-
-    <div class="about-devs">
-        <div class="person1">
-            <img class="photo" src="https://www.iitk.ac.in/counsel/assets/img/developers/abhishek.jpg">
-            <h4 style="margin: 10px;">Abhishek Gupta</h4>
-            <p class="email">ft.abhishekgupta@gmail.com</p>
-            <div class="icons3">
-                <i class="fab fa-facebook-square" style="margin: 5px; font-size: 20px;"></i>
-                <i class="fab fa-github-square" style="margin: 5px; font-size: 20px;"></i>
-                <i class="fab fa-linkedin" style="margin: 5px; font-size: 20px;"></i>
+            <div class="table">
+                <!--facebook page table-->
+                <div class="conatiner">
+                    <img width="100%"
+                        src="https://scontent.fidr4-1.fna.fbcdn.net/v/t1.6435-9/s320x320/68589460_2624921037518282_9073434174500634624_n.png?_nc_cat=100&ccb=1-5&_nc_sid=dd9801&_nc_ohc=38-TMqY7LAUAX-RicsX&_nc_ht=scontent.fidr4-1.fna&edm=ALBQ-WsEAAAA&oh=977ae2a2fb3daf338e01b3021b05728b&oe=614FFBCD">
+                    <div class="fbpage">
+                        <img class="logo2"
+                            src="https://scontent.fidr4-1.fna.fbcdn.net/v/t31.18172-1/cp0/c1.0.50.50a/p50x50/10514244_803875646289506_5459228464975966540_o.png?_nc_cat=102&ccb=1-5&_nc_sid=dbb9e7&_nc_ohc=bjGsIVT67RYAX_-gPIn&_nc_ht=scontent.fidr4-1.fna&edm=ALBQ-WsEAAAA&oh=22082dcf810ad9c06eeea65e0f0273b0&oe=614FB8D2">
+                        <div style="margin-left: 5px;">
+                            <p class="like-us">Counselling Service, IIT ...</p>
+                            <div style="display: flex; align-items: center;"><a class="btn5"
+                                    href="https://www.facebook.com/login.php?next=https%3A%2F%2Fwww.facebook.com%2Fplugins%2Ferror%2Fconfirm%2Fpage%3Fiframe_referer%26kid_directed_site%3Dfalse%26secure%3Dtrue%26plugin%3Dpage%26return_params%3D%257B%2522adapt_container_width%2522%253A%2522true%2522%252C%2522app_id%2522%253A%2522%2522%252C%2522channel%2522%253A%2522https%253A%252F%252Fstaticxx.facebook.com%252Fx%252Fconnect%252Fxd_arbiter%252F%253Fversion%253D46%2523cb%253Df22ede1372085b8%2526domain%253Dwww.iitk.ac.in%2526is_canvas%253Dfalse%2526origin%253Dhttps%25253A%25252F%25252Fwww.iitk.ac.in%25252Ff34824cfe152d14%2526relation%253Dparent.parent%2522%252C%2522container_width%2522%253A%2522317%2522%252C%2522height%2522%253A%2522460%2522%252C%2522hide_cover%2522%253A%2522false%2522%252C%2522href%2522%253A%2522https%253A%252F%252Fwww.facebook.com%252FCounsellingServiceIitKanpur%2522%252C%2522locale%2522%253A%2522en_US%2522%252C%2522sdk%2522%253A%2522joey%2522%252C%2522show_facepile%2522%253A%2522true%2522%252C%2522small_header%2522%253A%2522true%2522%252C%2522tabs%2522%253A%2522timeline%2522%252C%2522width%2522%253A%2522400%2522%252C%2522ret%2522%253A%2522sentry%2522%252C%2522act%2522%253Anull%257D"><i
+                                        class="fab fa-facebook-square" style="margin-right: 5px;"></i>Like Page</a>
+                                <p style="font-size: 12px; margin: 0px 0px 0px 5px; color: white;">7.3K likes</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="facebook">
+                    <!--facebook page-->
+                    <iframe
+                        src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FCounsellingServiceIitKanpur%2F&tabs=timeline&width=300&height=400&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=true&appId"
+                        width="300" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                        allowfullscreen="true"
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="person1">
-            <div class="cross"><i class="fas fa-times" style="font-size: 30px; cursor: pointer;"></i></div>
-            <img class="photo" src="https://www.iitk.ac.in/counsel/assets/img/developers/sarthak.jpg">
-            <h4 style="margin: 10px;">Sarthak Agrawal</h4>
-            <p class="email">asarthak@gmail.com</p>
-            <div class="icons3">
-                <i class="fab fa-facebook-square" style="margin: 5px; font-size: 20px;"></i>
-                <i class="fab fa-github-square" style="margin: 5px; font-size: 20px;"></i>
-                <i class="fab fa-linkedin" style="margin: 5px; font-size: 20px;"></i>
+    <footer>
+        <!--bottom inks-->
+        <div class="links">
+
+            <p class="link"><i class="far fa-copyright" style="font-size: 15px;"></i> 2020 <a class="anchor"
+                    href="https://www.iitk.ac.in/" target="_blank">IIT Kanpur</a> </p>
+            <p class="link"><a class="anchor" href="https://www.iitk.ac.in/counsel/old/index.php" target="_blank">Old
+                    Website</a></p>
+            <p class="link"><button class="bttn">Developers</button></p>
+
+            <div class="about-devs">
+                <!--for developers element or developers info-->
+
+                <div class="person1">
+                    <img class="photo" src="https://www.iitk.ac.in/counsel/assets/img/developers/abhishek.jpg">
+                    <h4 style="margin: 10px;">Abhishek Gupta</h4>
+                    <p class="email">ft.abhishekgupta@gmail.com</p>
+
+                    <div class="icons3">
+                        <a href="https://www.facebook.com/ft.abhishekk" style="color: white;"><i
+                                class="fab fa-facebook-square" style="margin: 5px; font-size: 20px;"></i></a>
+                        <a href="https://github.com/ft-abhishekgupta" style="color: white;"><i
+                                class="fab fa-github-square" style="margin: 5px; font-size: 20px;"></i></a>
+                        <a href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQHoipdNXipx7wAAAXuR3gXg3MNMgDL1yN9AXTTXJSvS5lCkCfVsbRuCcoKksoGz3r27mRFU5ltoAzBrhO5MI0YEekjCL6SYDJAwnrjpTPlURkdsqZiH3TEZWNh2kv-e2Vh7lN8=&originalReferer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fft-abhishekgupta%2F"
+                            style="color: white;"><i class="fab fa-linkedin"
+                                style="margin: 5px; font-size: 20px;"></i></a>
+                    </div>
+
+                </div>
+
+                <div class="person1">
+                    <div class="cross"><i class="fas fa-times" style="font-size: 30px; cursor: pointer;"></i></div>
+
+                    <img class="photo" src="https://www.iitk.ac.in/counsel/assets/img/developers/sarthak.jpg">
+                    <h4 style="margin: 10px;">Sarthak Agrawal</h4>
+                    <p class="email">asarthak@gmail.com</p>
+
+                    <div class="icons3">
+                        <a href="https://www.facebook.com/sart1995" style="color: white;"><i
+                                class="fab fa-facebook-square" style="margin: 5px; font-size: 20px;"></i></a>
+                        <a href="https://github.com/its-sarthak" style="color: white;"><i class="fab fa-github-square"
+                                style="margin: 5px; font-size: 20px;"></i></a>
+                        <a href="https://www.linkedin.com/in/sarthak-agrawal-a98846a6/" style="color: white;"><i
+                                class="fab fa-linkedin" style="margin: 5px; font-size: 20px;"></i></a>
+                    </div>
+
+                </div>
             </div>
-        </div>
-    </div>
 
-    <div class="services">
-        <div class="service">
-            
-        <div class="cross1"><i class="fas fa-times" style="font-size: 30px; color: white;"></i></div>
-            <a class="anchor5" href="#">DE-ADDITION CLINIC</a>
         </div>
-        <div class="service">
-            <a class="anchor5" href="#">MENTAL HEALTH SUPPORT</a>
-        </div>
-        <div class="service">
-            <a class="anchor5" href="#">WORKSHOP AND SESSIONS</a>
-        </div>
-        <div class="service">
-            <a class="anchor5" href="#">ACADEMIC SUPPORT</a>
-        </div>
-        <div class="service">
-            <a class="anchor5" href="#">BECAUSE YOU MATTER</a>
-        </div>
-    </div>
-
-    <div class="services1">
-        <div class="service">
-            <div class="cross2"><i class="fas fa-times" style="font-size: 30px; color: white;"></i></div>
-            <a class="anchor5" href="#">EVALUATE YOUR PSYCHOLOGY <br>STATE</a>
-        </div>
-        <div class="service">
-            <a class="anchor5" href="#">INTERNET ADDICTION TEST</a>
-        </div>
-    </div>
+    </footer>
 
 
-    <script>
+    <script> // developers info script and cross script
         var aboutDevs = document.querySelector('.about-devs');
         var Blur = document.querySelector('.blur');
         var bttn = document.querySelector('.bttn');
@@ -989,17 +1212,8 @@
             services.classList.toggle('appear');
         };
 
-
-        /*aboutDevs.addEventListener('click', () => {
-            aboutDevs.classList.toggle('appear');
-        })*/
     </script>
 
-<!--    <script>
-        function goFunction() {
-            alert("aaoo");
-        }
-    </script>-->
 </body>
 
 </html>
