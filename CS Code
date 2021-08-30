@@ -697,7 +697,8 @@
         }
 
         .services1 {
-            width: 65%;
+            width: 80%;
+            padding: 30px 20px;
         }
 
         .tables {
