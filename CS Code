@@ -345,6 +345,7 @@
         align-items: center;
         background-image: linear-gradient(to bottom right, #f5365c, #fb6340);
         padding: 20px 40px;
+        z-index: 100;
     }
 
     .services1 {
@@ -359,6 +360,7 @@
         align-items: center;
         background-image: linear-gradient(to bottom right, #f5365c, #fb6340);
         padding: 20px 40px;
+        z-index: 100;
     }
 
     .service {
